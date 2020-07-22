@@ -1,0 +1,71 @@
+{
+  "console": {
+		"prefix": "pp",
+		"body": [
+			"console.log('baoanj', $1)"
+		],
+		"description": "baj console.log"
+  },
+  "api": {
+		"prefix": "aa",
+		"body": [
+			"async $1() {",
+      "  try {",
+      "    this.loading = true",
+			"    const res = await HTTP.$2()",
+			"    if (+res.code === 0) {",
+			"      //",
+			"    } else {",
+			"      this.\\$message.error(res.msg)",
+			"    }",
+      "  } catch (error) {",
+      "    console.error(error)",
+      "  } finally {",
+      "    this.loading = false",
+      "  }",
+      "}"
+		],
+		"description": "baj api call"
+  },
+  "forEach": {
+		"prefix": "fe",
+		"body": [
+      "$1.forEach(item => {",
+      "  $2",
+      "}"
+		],
+		"description": "baj Array forEach"
+  },
+  "setTimeout": {
+		"prefix": "st",
+		"body": [
+      "setTimeout(() => {",
+      "  $1",
+      "}, 1000)"
+		],
+		"description": "baj setTimeout"
+  },
+  "forLoop": {
+		"prefix": "fl",
+		"body": [
+      "for (let i = 0; i < $1.length; i++) {",
+      "  $2",
+      "}"
+		],
+		"description": "baj for loop"
+  },
+  "routerPush": {
+		"prefix": "rp",
+		"body": [
+      "this.\\$router.push({ name: ''${1:, query: {\\}, params: {\\}} })"
+		],
+		"description": "baj router push"
+  },
+  "importComp": {
+		"prefix": "ic",
+		"body": [
+      "import $1 from './components/$1'"
+		],
+		"description": "baj import component"
+  }
+}
