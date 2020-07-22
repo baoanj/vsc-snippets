@@ -6,7 +6,7 @@
 		],
 		"description": "baj console.log"
   },
-  "api": {
+  "apiCall": {
 		"prefix": "aa",
 		"body": [
 			"async $1() {",
@@ -67,5 +67,33 @@
       "import $1 from './components/$1'"
 		],
 		"description": "baj import component"
+	},
+	"jsDocFetch": {
+		"prefix": "ff",
+		"body": [
+			"/**",
+			" * 接口",
+			" * @param {String} ${1:id} 描述",
+			" * @returns {Promise} response.data",
+			" */",
+			"name({ ${1:id} }) {",
+			"  return fetch('$2', { ${1:id} })",
+			"}"
+		],
+		"description": "baj api fetch with jsDoc"
+  },
+	"jsDocFetchGet": {
+		"prefix": "fg",
+		"body": [
+			"/**",
+			" * 接口",
+			" * @param {String} ${1:id} 描述",
+			" * @returns {Promise} response.data",
+			" */",
+			"name({ ${1:id} }) {",
+			"  return fetchGet(`$2?${1:id}=\\${${1:id}}`)",
+			"}"
+		],
+		"description": "baj api fetchGet with jsDoc"
   }
 }
