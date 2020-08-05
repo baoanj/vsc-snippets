@@ -44,9 +44,7 @@
   },
   "vFor": {
     "prefix": "vf",
-    "body": [
-      "v-for=\"${1:(item, index)} in $2\" :key=\"$3\""
-    ],
+    "body": ["v-for=\"${1:(item, index)} in $2\" :key=\"$3\""],
     "description": "baj v-for"
   }
 }

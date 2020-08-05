@@ -23,5 +23,18 @@
       "background-image: linear-gradient(135deg, #50a0f0 0%, #3c78f0 100%);"
     ],
     "description": "baj linear-gradient"
+  },
+  "styleReset": {
+    "prefix": "ss",
+    "body": [
+      "*,",
+      "*::before,",
+      "*::after {",
+      "  margin: 0;",
+      "  padding: 0;",
+      "  box-sizing: border-box;",
+      "}"
+    ],
+    "description": "baj style reset"
   }
 }

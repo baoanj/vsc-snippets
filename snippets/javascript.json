@@ -32,7 +32,7 @@
 		"body": [
       "$1.forEach(item => {",
       "  $2",
-      "}"
+      "})"
 		],
 		"description": "baj Array forEach"
   },
